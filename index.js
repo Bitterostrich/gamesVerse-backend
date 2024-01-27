@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING).then(() => console.log('Mo
 .catch(error => console.error('MongoDB connection error', error ))
 
 const corsOptions = {
-     origin: 'https://games-verse-frontend-c7a4-kudyvfd5d-bitterostrichs-projects.vercel.app',
+     origin: 'https://games-verse-frontend-d5in7ly8t-bitterostrichs-projects.vercel.app',
    };
 
 
