@@ -16,11 +16,14 @@ const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGO_CONNECTION_STRING).then(() => console.log('MongoDB connected'))
 .catch(error => console.error('MongoDB connection error', error ))
 
+const corsOptions = {
+     origin: 'https://games-verse-frontend-c7a4-kudyvfd5d-bitterostrichs-projects.vercel.app/',
+   };
 
 
 // middleware
 app.use(express.json());
-app.use(cors()) // allows requests from the frontend by setting correct Headers.
+app.use(cors(corsOptions)) // allows requests from the frontend by setting correct Headers.
 
 app.use(gamesRouter)
 app.use(authRouter)
